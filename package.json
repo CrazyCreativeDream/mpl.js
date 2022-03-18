@@ -1,0 +1,27 @@
+{
+  "name": "mpl.js",
+  "version": "0.0.1",
+  "description": "JavaScript Multi Plaform Launcher",
+  "main": "./handle/index.js",
+  "scripts": {
+    "dev:vercel": "npx vercel dev --debug -l 9000",
+    "run:vercel": "npx vercel dev -l 9000",
+    "run:node": "node ./api/node.js"
+  },
+  "author": "ChenYFan",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "跨平台",
+    "Node",
+    "Deno",
+    "WebWorker",
+    "JS启动器"
+  ],
+  "devDependencies": {
+    "@vercel/node": "^1.13.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.3"
+  }
+}
