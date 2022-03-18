@@ -28,10 +28,23 @@ http.createServer(async (req, res) => {
         })) : null
     })
     const response = await handle(request)
-    for (var i in response.headers.raw()) {
-        res.setHeader(i, response.headers.raw()[i])
-    }
-    res.writeHead(response.status || 200)
+    response.headers.forEach((value, key) => {
+        if(
+            key.toLowerCase() == 'connection' ||
+            key.toLowerCase() == 'content-length' ||
+            key.toLowerCase() == 'content-encoding' ||
+            key.toLowerCase() == 'transfer-encoding' ||
+            key.toLowerCase() == 'date' ||
+            key.toLowerCase() == 'server'
+        ){
+            return
+        }else{
+
+            res.setHeader(key, value)
+        }
+    })
+    res.writeHead(response.status || 200,response.statusText || "OK")
+    
     res.end(Buffer.from(await response.arrayBuffer()))
 
 
