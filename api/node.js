@@ -43,6 +43,8 @@ http.createServer(async (req, res) => {
             res.setHeader(key, value)
         }
     })
+    //cookie
+
     res.writeHead(response.status || 200,response.statusText || "OK")
     
     res.end(Buffer.from(await response.arrayBuffer()))
@@ -50,4 +52,5 @@ http.createServer(async (req, res) => {
 
 }).listen(9000)
 console.log('listening on http://localhost:9000')
+
 
