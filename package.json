@@ -1,12 +1,13 @@
 {
   "name": "mpl.js",
-  "version": "0.0.1",
+  "version": "0.0.1-beta-2",
   "description": "JavaScript Multi Plaform Launcher",
   "main": "./handle/index.js",
   "scripts": {
     "dev:vercel": "npx vercel dev --debug -l 9000",
     "run:vercel": "npx vercel dev -l 9000",
-    "run:node": "node ./api/node.js"
+    "run:node": "node ./api/node.js",
+    "run:heroku":"node ./api/heroku.js"
   },
   "author": "ChenYFan",
   "type": "module",
