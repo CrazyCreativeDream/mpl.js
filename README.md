@@ -18,7 +18,10 @@
 - [x] NodeJS
     - [x] Vercel
     - [x] SCF
-    - [ ] Heroku
+    - [x] Heroku
     - [x] Server
+    - [ ] Railway
+- [ ] DenoJS
+    - [ ] DenoDeploy
 
 请使用先进的`Request/Response`完成主程序开发,接入`/handle/index.js`即可 
